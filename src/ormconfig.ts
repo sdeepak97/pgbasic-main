@@ -7,12 +7,14 @@ const isCompiled = path.extname(__filename).includes("js");
 dotenv.config();
 
 export default {
+  url:process.env.DATABASE_URL,
+  ssl:{rejectUnauthorized:false},
   type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "postgres",
-  password: "9848755758",
-  database: "postgres",
+  host:  process.env.Host || "localhost",
+  port:  process.env.Host || 5432,
+  username:  process.env.User || "postgres",
+  password:  process.env.DB_Password ||"9848755758",
+  database:  process.env.Database ||"postgres",
   synchronize: !process.env.DB_NO_SYNC,
   logging: !process.env.DB_NO_LOGS,
   autoReconnect: true,
