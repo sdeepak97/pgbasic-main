@@ -9,6 +9,7 @@ export class TodoList {
   @Column("varchar", { nullable: false })
   title: string = "";
 
+  
   @Column("varchar", { nullable: false })
   description: string = "";
 }
