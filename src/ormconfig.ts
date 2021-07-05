@@ -11,7 +11,7 @@ export default {
   ssl:{rejectUnauthorized:false},
   type: "postgres",
   host:  process.env.Host || "localhost",
-  port:  process.env.Host || 5432,
+  port:  process.env.DB_Port || 5432,
   username:  process.env.User || "postgres",
   password:  process.env.DB_Password ||"9848755758",
   database:  process.env.Database ||"postgres",
